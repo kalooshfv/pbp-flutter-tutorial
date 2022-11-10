@@ -62,15 +62,14 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             // Adding clickable menu
             ListTile(
-              title: const Text('Counter'),
-              onTap: () {
-                // Routing the menu to the main page
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MyHomePage()),
-                );
-              },
-            ),
+                title: const Text('Counter'),
+                onTap: () {
+                  // Routing the menu to the main page
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => const MyHomePage()),
+                  );
+                }),
             ListTile(
               title: const Text('Form'),
               onTap: () {

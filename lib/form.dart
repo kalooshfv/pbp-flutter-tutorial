@@ -25,7 +25,7 @@ class _MyFormPageState extends State<MyFormPage> {
     } else if (diplomaDegree) {
       return "Diploma";
     } else if (masterDegree) {
-      return "Masters";
+      return "Master's";
     } else {
       return "Doctorate";
     }
@@ -207,16 +207,19 @@ class _MyFormPageState extends State<MyFormPage> {
                     });
                   },
                 ),
-                SwitchListTile(
-                  title: const Text('Practice Mode'),
-                  value: _switchValue,
-                  onChanged: (bool value) {
-                    setState(() {
-                      _switchValue = value;
-                    });
-                  },
-                  secondary: const Icon(Icons.run_circle_outlined),
-                ),
+                Padding(
+                    // Using padding of 8 pixels
+                    padding: const EdgeInsets.all(8.0),
+                    child: SwitchListTile(
+                      title: const Text('Practice Mode'),
+                      value: _switchValue,
+                      onChanged: (bool value) {
+                        setState(() {
+                          _switchValue = value;
+                        });
+                      },
+                      secondary: const Icon(Icons.run_circle_outlined),
+                    )),
                 TextButton(
                   child: const Text(
                     "Save",
