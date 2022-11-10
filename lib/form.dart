@@ -244,13 +244,30 @@ class _MyFormPageState extends State<MyFormPage> {
                                     const EdgeInsets.only(top: 20, bottom: 20),
                                 shrinkWrap: true,
                                 children: <Widget>[
-                                  Center(child: const Text('Informasi Data')),
+                                  Center(
+                                    child: const Text('Informasi Data',
+                                        style: TextStyle(
+                                            fontSize: 25, color: Colors.black)),
+                                  ),
                                   SizedBox(height: 20),
-                                  Text('Full Name: ' + _fullName),
-                                  Text('Age: ' + age.toString()),
-                                  Text('Class: ' + pdbClass),
-                                  Text('Degree: ' + degreeString()),
-                                  Text('Practice: ' + _switchValue.toString()),
+                                  Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: [
+                                          Text('Full Name: ' + _fullName),
+                                          SizedBox(height: 10),
+                                          Text('Age: ' + age.toString()),
+                                          SizedBox(height: 10),
+                                          Text('Class: ' + pdbClass),
+                                          SizedBox(height: 10),
+                                          Text('Degree: ' + degreeString()),
+                                          SizedBox(height: 10),
+                                          Text('Practice: ' +
+                                              _switchValue.toString()),
+                                        ],
+                                      )),
                                   TextButton(
                                     onPressed: () {
                                       Navigator.pop(context);
