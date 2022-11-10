@@ -251,7 +251,8 @@ class _MyFormPageState extends State<MyFormPage> {
                                   ),
                                   SizedBox(height: 20),
                                   Padding(
-                                      padding: const EdgeInsets.all(8.0),
+                                      padding:
+                                          const EdgeInsets.only(left: 10.0),
                                       child: Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceAround,
