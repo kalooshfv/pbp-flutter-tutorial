@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pbpfluttertutorial/page/main.dart';
+import 'package:pbpfluttertutorial/main.dart';
 import 'package:pbpfluttertutorial/page/to_do_page.dart';
 
 class MyFormPage extends StatefulWidget {
