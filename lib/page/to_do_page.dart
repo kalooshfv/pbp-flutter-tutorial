@@ -14,10 +14,6 @@ class ToDoPage extends StatefulWidget {
 }
 
 class _ToDoPageState extends State<ToDoPage> {
-  Future<List<Todo>> _fetchToDo() async {
-    return to_do_future().fetchToDo();
-  }
-
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -68,7 +64,7 @@ class _ToDoPageState extends State<ToDoPage> {
           ),
         ),
         body: FutureBuilder(
-            future: _fetchToDo(),
+            future: to_do_future().fetchToDo(),
             builder: (context, AsyncSnapshot snapshot) {
               if (snapshot.data == null) {
                 return const Center(child: CircularProgressIndicator());
